@@ -1,0 +1,112 @@
+[
+  {
+    "forbes_rank": "1", 
+    "total_donations": "412258", 
+    "gift": "Wealthiest philantrophist in the world. $200-million for vaccines.", 
+    "title": "Co-founder and Chairman of Microsoft", 
+    "notes": "According to CRP figures.", 
+    "source": "http://philanthropy.com/blogs/philanthropytoday/gates-supported-charity-buys-vaccines/12576", 
+    "donor_rank": "6", 
+    "networth": "59 B", 
+    "name": "Bill Gates"
+  }, 
+  {
+    "forbes_rank": "2", 
+    "total_donations": "$193700", 
+    "gift": "$10.3 billion to the Gates Foundation", 
+    "title": "Investor and businessman. Chairman and CEO of Berkshire Hathaway", 
+    "notes": "All figures as of May 29 2012", 
+    "source": "http://www.cnbc.com/id/43676962/Warren_Buffett_s_Stock_Donations_to_Gates_Foundation_Top_10_Billion", 
+    "donor_rank": "10", 
+    "networth": "39 B", 
+    "name": "Warren Buffett"
+  }, 
+  {
+    "forbes_rank": "3", 
+    "total_donations": "444274", 
+    "gift": "Promises to give at least half his wealth in \"the Giving Pledge\" ", 
+    "title": "Businessman. Co-founder and CEO of Oracle.", 
+    "notes": "", 
+    "source": "http://news.discovery.com/human/billionaire-pledge-income.html", 
+    "donor_rank": "7", 
+    "networth": "33 B", 
+    "name": "Larry Ellison"
+  }, 
+  {
+    "forbes_rank": "4", 
+    "total_donations": "$390,700", 
+    "gift": "Given $120 thousand to the Smithsonian's Astrophysical Observatory", 
+    "title": "Businessman. Chairman and CEO of Koch Industries", 
+    "notes": "Koch money is based on individual donations. Does not include spouses. Does include PAC (ex: KochPAC $)", 
+    "source": "IRW database/990 forms", 
+    "donor_rank": "8", 
+    "networth": "25 B", 
+    "name": "Charles G. Koch"
+  }, 
+  {
+    "forbes_rank": "5", 
+    "total_donations": "4785700", 
+    "gift": "Pledged to give $100 million to New York City Center Theatre.", 
+    "title": "Businessman. Executive vice president of Koch Industries.", 
+    "notes": "", 
+    "source": "990 forms/ database", 
+    "donor_rank": "4", 
+    "networth": "25 B", 
+    "name": "David H. Koch"
+  }, 
+  {
+    "forbes_rank": "6", 
+    "total_donations": "$291942", 
+    "gift": "$4 million to International Community Foundation, fostering health, education and environment grants in Mexico and Latin America.", 
+    "title": "One of the heirs to the Walton (Walmart) family fortune", 
+    "notes": "Figures from Political Moneyline", 
+    "source": "http://www.milliondollarlist.org/donors/christy-walton-and-her-late-husband-john", 
+    "donor_rank": "9", 
+    "networth": "24.5 B", 
+    "name": "Christy Walton"
+  }, 
+  {
+    "forbes_rank": "7", 
+    "total_donations": "33467371", 
+    "gift": "$100 million grant Human Rights Watch", 
+    "title": "Financier and investor. Chairman of Soros ", 
+    "notes": "", 
+    "source": "http://philanthropy.com/article/Soros-Pledges-100-Million-to/124325/", 
+    "donor_rank": "1", 
+    "networth": "22 B", 
+    "name": "George Soros"
+  }, 
+  {
+    "forbes_rank": "8", 
+    "total_donations": "21079413", 
+    "gift": "$100 million to support Birthright Israel.", 
+    "title": "Las Vegas casino magnate, Las Vegas Sands Corporation", 
+    "notes": "", 
+    "source": "http://www.israelnationalnews.com/News/News.aspx/150285#.T-NP0LV4z1V", 
+    "donor_rank": "2", 
+    "networth": "21.5 B", 
+    "name": "Sheldon Adelson"
+  }, 
+  {
+    "forbes_rank": "9", 
+    "total_donations": "$2534568", 
+    "gift": "Though it can't be directly attributed to Jim Walton, the Walton Family Foundation gave $20.99 million to Conservation International.", 
+    "title": "Chairman of Arvest Bank, one of the heirs to the Walton (Walmart) family fortune", 
+    "notes": "", 
+    "source": "http://www.milliondollarlist.org/donors/walton-family-foundation    http://arkansasnews.com/2008/09/15/billionaire-jim-walton-gives-75000-to-anti-lottery-campaign/", 
+    "donor_rank": "5", 
+    "networth": "21.1 B", 
+    "name": "Jim Walton"
+  }, 
+  {
+    "forbes_rank": "10", 
+    "total_donations": "$8,187435", 
+    "gift": "Crystal Bridges American Art Museum - $1.2 billion donation from the Walton family and Walton Family Foundation", 
+    "title": "One of the heirs to the Walton (Walmart) family fortune", 
+    "notes": "", 
+    "source": "http://www.artnews.com/2012/01/12/american-art-alice-walton%E2%80%99s-way/", 
+    "donor_rank": "3", 
+    "networth": "20.9 B", 
+    "name": "Alice Walton"
+  }
+]

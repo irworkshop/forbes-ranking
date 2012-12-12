@@ -1,0 +1,9 @@
+{
+  "name": "hogan",
+  "version": "0.0.0",
+  "commit": "d7ab5575bbf657b18ee80557a102769c9e2225c7",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/twitter/hogan.js.git"
+  }
+}

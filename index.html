@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Forbes List</title>
+    <link rel="stylesheet" type="text/css" href="components/bootstrap/bootstrap/css/bootstrap.css">
+</head>
+<body>
+<div id="app" class="container">
+    <div class="row">
+        <div class="span8">
+            <table id="people" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Forbes Rank</th>
+                        <th>Name</th>
+                        <th>Donor Rank</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="sidebar" class="span4">
+            <img src="http://placehold.it/145x191&text=placeholder">
+        </div>
+    </div>
+</div>
+
+<script type="x-jst" id="row-template">
+<td>{{forbes_rank}}</td>
+<td>{{name}}</td>
+<td>{{donor_rank}}</td>
+</script>
+
+<script type="x-jst" id="sidebar-template">
+<img src="http://placehold.it/145x191&text={{name}}">
+<div class="info">
+    <h2>{{name}}</h2>
+    <h3>Ranking</h3>
+    <ul class="ranking">
+        <li class="forbes">Forbes:&nbsp;{{forbes_rank}}</li>
+        <li class="donor">Donor:&nbsp;{{donor_rank}}</li>
+    </ul>
+
+    <p>
+        Net Worth: ${{networth}} <br>
+        {{title}}
+    </p>
+
+</div>
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="components/underscore/underscore-min.js"></script>
+<script src="components/backbone/backbone-min.js"></script>
+<script src="components/hogan/dist/hogan-3.0.0.amd.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
