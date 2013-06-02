@@ -1,3 +1,5 @@
+// safety wrapper
+;(function() {
 /****
 Dirt simple Backbone app to handle 10 very rich people.
 ****/
@@ -155,3 +157,9 @@ var Forbes = Backbone.View.extend({
         this.$el.html(JST.table());
     }
 });
+
+// export Forbes
+window.Forbes = Forbes;
+
+// close this up
+})();

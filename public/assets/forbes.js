@@ -3141,6 +3141,8 @@ Backbone.tabletopSync = function(method, model, options, error) {
 
 })(this);
 
+// safety wrapper
+;(function() {
 /****
 Dirt simple Backbone app to handle 10 very rich people.
 ****/
@@ -3297,7 +3299,13 @@ var Forbes = Backbone.View.extend({
     render: function() {
         this.$el.html(JST.table());
     }
-});(function(){
+});
+
+// export Forbes
+window.Forbes = Forbes;
+
+// close this up
+})();(function(){
 window.JST = window.JST || {};
 var template = function(str){var fn = new Function('obj', 'var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push(\''+str.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/<%=([\s\S]+?)%>/g,function(match,code){return "',"+code.replace(/\\'/g, "'")+",'";}).replace(/<%([\s\S]+?)%>/g,function(match,code){return "');"+code.replace(/\\'/g, "'").replace(/[\r\n\t]/g,' ')+"__p.push('";}).replace(/\r/g,'\\r').replace(/\n/g,'\\n').replace(/\t/g,'\\t')+"');}return __p.join('');");return fn;};
 window.JST['row'] = template('<td><%= forbes_rank %></td>\n<td><%= name %></td>\n<td><%= donor_rank %></td>\n');
