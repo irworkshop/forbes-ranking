@@ -3,9 +3,35 @@
 <head>
     <title>Forbes List</title>
     <link rel="stylesheet" type="text/css" href="components/bootstrap/bootstrap/css/bootstrap.css">
+    <style type="text/css">
+    /***
+    .forbes { float: left; }
+    .forbes.row {
+        clear: both;
+        width: 100%;
+    }
+
+    .forbes.span8 {
+        width: 75%;
+    }
+
+    .forbes.span4 {
+        width: 25%;
+    }
+    ***/
+    .forbes-ranking-table thead tr {
+        background-color: orange;
+    }
+
+    .forbes-ranking-table tbody tr:hover,
+    .forbes-info h2,
+    .forbes-net-worth {
+        color: orange;
+    }
+    </style>
 </head>
 <body>
-    <div id="app" class="container"></div>
+    <div id="forbes" class="container"></div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
@@ -17,7 +43,7 @@
     -->
     <script src="public/assets/forbes.js"></script>
     <script type="text/javascript">
-    var forbes = new Forbes({ el: $('#app') });
+    var forbes = new Forbes({ el: '#forbes' });
     </script>
 </body>
 </html>

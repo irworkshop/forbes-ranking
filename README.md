@@ -1,9 +1,27 @@
 # The Forbes Chart
 
-This app is built using [Bootstrap](http://twitter.github.com/bootstrap) and [Backbone](http://backbonejs.org).
+tl;dr
 
-Data is stored in a flat JSON file called `data/forbes.json`, built from `data/forbes.csv` using `csvjson`, part of the [CSVKit][] package.
+    <div id="forbes"></div>
+    <script src="path/to/forbes.js"></script>
+    <script type="text/javascript">
+    new Forbes({ el: '#forbes' });
+    </script>
 
-[csvkit]: http://csvkit.readthedocs.org/en/latest/
+And everything gets loaded and rendered. Markup is injected into the page, so it will pick up the surrounding styles.
 
-This is a prototype. No optimizations for speed or simplicity have been made yet.
+A style example:
+
+    <style type="text/css">
+    .forbes-ranking-table thead tr {
+        background-color: orange;
+    }
+
+    .forbes-ranking-table tbody tr:hover,
+    .forbes-info h2,
+    .forbes-net-worth {
+        color: orange;
+    }
+    </style>
+
+Data gets pulled from [this spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0AprNP7zjIYS1dFV0SW5lMmVKcjJMcnNyc1dfYy1ySEE#gid=0), via Tabletop.js. **Any changes made will appear LIVE**.

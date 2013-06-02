@@ -1,14 +1,16 @@
 <img src="<%= image_url %>">
-<div class="info">
+<div class="forbes-info">
     <h2><%= name %></h2>
-    <h3>Ranking</h3>
-    <ul class="ranking">
-        <li class="forbes">Forbes:&nbsp;<%= forbesrank %></li>
-        <li class="donor">Donor:&nbsp;<%= donorrank %></li>
-    </ul>
 
     <p>
-        Net Worth: $<%= networth %> <br>
+        <span class="forbes-net-worth">Net Worth: $<%= networth %></span> <br>
         <%= title %>
     </p>
+
+    <h3>Ranking</h3>
+    <ul class="ranking">
+        <li class="forbes-rank">Forbes:&nbsp;<%= forbesrank %></li>
+        <li class="forbes-donor-rank">Donor:&nbsp;<%= donorrank %></li>
+    </ul>
+
 </div>
