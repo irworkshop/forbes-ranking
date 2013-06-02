@@ -12,21 +12,31 @@ window.JST
   - table: contains rows
 ***/
 
+/****
+Tabletop storage
+****/
+
+var storage = new Tabletop({
+    key: '0AprNP7zjIYS1dFV0SW5lMmVKcjJMcnNyc1dfYy1ySEE',
+    simpleSheet: true,
+    wait: true
+});
+
 // models
 
 var Person = Backbone.Model.extend({
 
     defaults: {
-        forbes_rank: "",
-        total_donations: "", 
+        forbesrank: "",
+        totaldonations: "", 
         gift: "", 
         title: "", 
         notes: "", 
         source: "", 
-        donor_rank: "", 
-        net_worth: "", 
+        donorrank: "", 
+        networth: "", 
         name: "",
-        image_url: "",
+        imageurl: "",
     },
 
     initialize: function(attributes, options) {
@@ -44,8 +54,12 @@ var PersonList = Backbone.Collection.extend({
 
     model: Person,
 
-    url: "data/forbes.json"
-
+    fetch: function(options) {
+        var collection = this;
+        storage.fetch(function(data) {
+            collection.reset(data, options);
+        });
+    }
 });
 
 // views

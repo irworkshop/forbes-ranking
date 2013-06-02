@@ -3155,21 +3155,31 @@ window.JST
   - table: contains rows
 ***/
 
+/****
+Tabletop storage
+****/
+
+var storage = new Tabletop({
+    key: '0AprNP7zjIYS1dFV0SW5lMmVKcjJMcnNyc1dfYy1ySEE',
+    simpleSheet: true,
+    wait: true
+});
+
 // models
 
 var Person = Backbone.Model.extend({
 
     defaults: {
-        forbes_rank: "",
-        total_donations: "", 
+        forbesrank: "",
+        totaldonations: "", 
         gift: "", 
         title: "", 
         notes: "", 
         source: "", 
-        donor_rank: "", 
-        net_worth: "", 
+        donorrank: "", 
+        networth: "", 
         name: "",
-        image_url: "",
+        imageurl: "",
     },
 
     initialize: function(attributes, options) {
@@ -3187,8 +3197,12 @@ var PersonList = Backbone.Collection.extend({
 
     model: Person,
 
-    url: "data/forbes.json"
-
+    fetch: function(options) {
+        var collection = this;
+        storage.fetch(function(data) {
+            collection.reset(data, options);
+        });
+    }
 });
 
 // views
@@ -3308,7 +3322,7 @@ window.Forbes = Forbes;
 })();(function(){
 window.JST = window.JST || {};
 var template = function(str){var fn = new Function('obj', 'var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push(\''+str.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/<%=([\s\S]+?)%>/g,function(match,code){return "',"+code.replace(/\\'/g, "'")+",'";}).replace(/<%([\s\S]+?)%>/g,function(match,code){return "');"+code.replace(/\\'/g, "'").replace(/[\r\n\t]/g,' ')+"__p.push('";}).replace(/\r/g,'\\r').replace(/\n/g,'\\n').replace(/\t/g,'\\t')+"');}return __p.join('');");return fn;};
-window.JST['row'] = template('<td><%= forbes_rank %></td>\n<td><%= name %></td>\n<td><%= donor_rank %></td>\n');
-window.JST['sidebar'] = template('<img src="<%= image_url %>">\n<div class="info">\n    <h2><%= name %></h2>\n    <h3>Ranking</h3>\n    <ul class="ranking">\n        <li class="forbes">Forbes:&nbsp;<%= forbes_rank %></li>\n        <li class="donor">Donor:&nbsp;<%= donor_rank %></li>\n    </ul>\n\n    <p>\n        Net Worth: $<%= net_worth %> <br>\n        <%= title %>\n    </p>\n</div>\n');
+window.JST['row'] = template('<td><%= forbesrank %></td>\n<td><%= name %></td>\n<td><%= donorrank %></td>\n');
+window.JST['sidebar'] = template('<img src="<%= image_url %>">\n<div class="info">\n    <h2><%= name %></h2>\n    <h3>Ranking</h3>\n    <ul class="ranking">\n        <li class="forbes">Forbes:&nbsp;<%= forbesrank %></li>\n        <li class="donor">Donor:&nbsp;<%= donorrank %></li>\n    </ul>\n\n    <p>\n        Net Worth: $<%= networth %> <br>\n        <%= title %>\n    </p>\n</div>\n');
 window.JST['table'] = template('<div class="row">\n    <div class="span8">\n        <table class="table table-hover forbes-ranking-table">\n            <thead>\n                <tr>\n                    <th>Forbes Rank</th>\n                    <th>Name</th>\n                    <th>Donor Rank</th>\n                </tr>\n            </thead>\n            <tbody></tbody>\n        </table>\n    </div>\n\n    <div class="span4 forbes-people-sidebar">\n        <img src="http://placehold.it/145x191&text=placeholder">\n    </div>\n</div>\n');
 })();
