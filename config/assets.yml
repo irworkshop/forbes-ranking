@@ -1,0 +1,12 @@
+package_assets: on
+embed_assets: off
+compress_assets: off
+gzip_assets: off
+
+javascripts:
+    forbes:
+        - components/underscore/underscore.js
+        - components/backbone/backbone.js
+        - components/tabletop/*.js
+        - js/app.js
+        - jst/*.jst
