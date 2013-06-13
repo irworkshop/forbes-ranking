@@ -41,8 +41,8 @@ var Person = Backbone.Model.extend({
 
     initialize: function(attributes, options) {
         this.view = new TableRow({ model: this });
-        if (!attributes.image_url) {
-            this.set('image_url', 'http://placehold.it/145x191&text=' + attributes.name);
+        if (!attributes.imageurl) {
+            this.set('imageurl', 'http://placehold.it/145x191&text=' + attributes.name);
         }
         return this;
     }
